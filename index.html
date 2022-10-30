@@ -3,12 +3,52 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<title>Campo eléctrico</title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<canvas id="myCanvas" width="620" height="260"></canvas>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<center>
+			&nbsp;
+			<div id="canvasesdiv">
+				<canvas id="myCanvas" width="600" height="400"></canvas>
+			</div>
+			&nbsp;
+			<div>Valor de la carga de la izquierda</div>
+			<div id="slider1">
+				-10 C
+				<input
+					type="range"
+					id="Charge1Value"
+					min="-10"
+					max="10"
+					value="5.0"
+					step="1.0"
+					oninput="showQ1(this.value)"
+					onchange="showQ1(this.value)"
+				/>
+				+10 C
+				<div id="initialQ1Value">5</div>
+			</div>
+			&nbsp;
+			<div>Valor de la carga de la derecha</div>
+			<div id="slider2">
+				-10 C
+				<input
+					type="range"
+					id="Charge2Value"
+					min="-10"
+					max="10"
+					value="-5.0"
+					step="1.0"
+					oninput="showQ2(this.value)"
+					onchange="showQ2(this.value)"
+				/>
+				+10 C
+				<div id="initialQ2Value">-5</div>
+			</div>
+			&nbsp;
+		</center>
 		<script src="script.js"></script>
 	</body>
 </html>

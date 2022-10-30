@@ -9,5 +9,12 @@ body {
 #myCanvas {
 	display: block;
 	border: 1px solid black;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+#canvasesdiv {
 	position: relative;
+	width: 600px;
+	height: 400px;
 }
